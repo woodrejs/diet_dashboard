@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import ProgressPanel from "./ProgressPanel";
+import WeekPanel from "./WeekPanel";
+import OptionsPanel from "./OptionsPanel";
 
 const SectionStyled = styled.div`
   width: 100%;
@@ -22,6 +24,8 @@ const OptionsBar = () => {
     <SectionStyled>
       <ContainerStyled>
         <ProgressPanel />
+        <WeekPanel />
+        <OptionsPanel />
       </ContainerStyled>
     </SectionStyled>
   );

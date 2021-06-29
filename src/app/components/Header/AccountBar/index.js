@@ -9,6 +9,7 @@ const AccountBarStyled = styled.div`
   margin-right: 23px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
 const SpanStyled = styled.span`
   font-family: HelveticaNeueLTStd;

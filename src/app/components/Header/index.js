@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import Menu from "./Menu";
 import AccountBar from "./AccountBar";
-import { fifth } from "../../style/colors";
+import { fifth, white } from "../../style/colors";
 
 //??? shadow blur ???
 const SectionStyled = styled.div`
   width: 100%;
   border-bottom: 1px solid ${fifth};
+  background-color: ${white};
 
   -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.13);
   -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.13);

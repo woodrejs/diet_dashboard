@@ -5,3 +5,5 @@ export const fourth = "#efefef";
 export const fifth = "#e1e1e1";
 export const eighth = "#bdbdbd";
 export const ninth = "#dbdbdb";
+export const background = "#f9f9f9";
+export const white = "#ffffff";

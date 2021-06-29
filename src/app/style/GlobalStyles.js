@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { background } from "./colors";
 import HelveticaNeueLTStdLtWOFF from "../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Lt.woff";
 import HelveticaNeueLTStdLtWOFF2 from "../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Lt.woff2";
 import HelveticaNeueLTStdRomanWOFF from "../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Roman.woff";
@@ -14,6 +15,10 @@ const GloblStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  body{
+    background-color: ${background};
   }
 
   @font-face {
