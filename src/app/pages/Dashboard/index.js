@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-
-const Tmp = styled.div`
-  font-family: HelveticaNeueLTStd;
-  font-size: 50px;
-  font-weight: 800;
-`;
+import Header from "../../components/Header";
 
 const Dashboard = () => {
-  return <Tmp>Dashboard</Tmp>;
+  return (
+    <DashboardStyled>
+      <Header />
+    </DashboardStyled>
+  );
 };
 export default Dashboard;
+
+const DashboardStyled = styled.div``;
