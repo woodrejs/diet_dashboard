@@ -2,13 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 import TableHeader from "../TableHeader";
+import TableColumnOutline from "../TableColumnOutline";
 import smileIcon from "./smile_icon.png";
 import printIcon from "./print_icon.png";
 
 const Container = styled.div`
   width: 125px;
+  height: 100%;
   border-top-right-radius: 5px;
   overflow: hidden;
+  position: relative;
 `;
 const Cell = styled.div`
   height: 460px;
@@ -71,7 +74,7 @@ const FooterText = styled.span`
   color: ${({ theme }) => theme.colors.gray};
 `;
 
-const TableSinglePartColumn = ({ day }) => {
+const TableSinglePartColumn = ({ day, isActive }) => {
   return (
     <Container>
       <TableHeader day={day} />
@@ -87,6 +90,7 @@ const TableSinglePartColumn = ({ day }) => {
           <FooterText>print</FooterText>
         </FooterBox>
       </Footer>
+      <TableColumnOutline isActive={isActive} horizontalPosition="0" />
     </Container>
   );
 };

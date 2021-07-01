@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { ten, black, white } from "../../../../style/colors";
 import check_icon from "./check_icon.png";
 import shakeColor from "./shake_color.png";
 import shakeGray from "./shake_gray.png";
@@ -34,8 +33,6 @@ const Text = styled.span`
   text-transform: capitalize;
   color: ${({ theme, isActive }) =>
     isActive ? theme.colors.textDark : theme.colors.textLight};
-
-  color: ${({ isActive }) => (isActive ? black : ten)};
 `;
 const Icon = styled.img`
   width: 17px;

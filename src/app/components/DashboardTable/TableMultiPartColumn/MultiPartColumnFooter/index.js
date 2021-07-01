@@ -45,7 +45,7 @@ const CheckIcon = styled.img`
   right: 32px;
 `;
 
-const MultiPartColumnFooter = ({ isCompleted, isActive }) => {
+const MultiPartColumnFooter = ({ isCompleted }) => {
   return (
     <Container>
       <TextBox>
@@ -53,7 +53,7 @@ const MultiPartColumnFooter = ({ isCompleted, isActive }) => {
       </TextBox>
 
       <ButtonBox>
-        {isCompleted || isActive ? (
+        {isCompleted ? (
           <>
             <Button src={weightColorIcon} alt="weightColorIcon" />
             <CheckIcon src={arrowIcon} alt="arrowIcon" />

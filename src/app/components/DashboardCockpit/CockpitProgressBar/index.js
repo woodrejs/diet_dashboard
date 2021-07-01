@@ -1,64 +1,64 @@
 import React from "react";
 import styled from "styled-components";
-import ProgressItem from "./ProgressItem";
-import { secoundary, eighth, ninth } from "../../../style/colors";
+import ProgressBarItem from "./ProgressBarItem";
 
-const ContainerStyled = styled.div`
+const Container = styled.div`
   width: 230px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 `;
-const TitleStyled = styled.span`
+const Text = styled.span`
   font-family: HelveticaNeueLTStd;
   font-weight: 400;
   font-size: 9px;
   line-height: 100%;
   margin: 34px 0 14px 0;
   text-transform: uppercase;
-  color: ${eighth};
+  color: ${({ theme }) => theme.colors.lightest};
 `;
-const ProgressBarStyled = styled.div`
+const ProgressBar = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;
 `;
-const LineStyled = styled.div`
+const Line = styled.div`
   position: absolute;
   top: 4px;
   left: 0px;
   width: 230px;
   height: 2px;
-  background-color: ${({ active }) => (active ? secoundary : ninth)};
+  background-color: ${({ isActive, theme }) =>
+    isActive ? theme.colors.primary : theme.colors.lightest};
   transform: scaleX(${({ progress }) => progress / 10});
   transform-origin: left;
 `;
-
 const displayItems = (qnt, curr) => {
   const items = [];
   for (let index = 0; index < qnt; index++) {
     items.push(
-      <ProgressItem
+      <ProgressBarItem
         title={index + 1}
         current={curr === index + 1 ? true : false}
-        completed={curr > index + 1 ? true : false}
+        isCompleted={curr > index + 1 ? true : false}
       />
     );
   }
   return items;
 };
 
-const ProgressPanel = () => {
+//progress issue
+const CockpitProgressBar = () => {
   return (
-    <ContainerStyled>
-      <TitleStyled children="your 12 week progress" />
-      <ProgressBarStyled>
+    <Container>
+      <Text>your 12 week progress</Text>
+      <ProgressBar>
         {displayItems(12, 7)}
-        <LineStyled progress={10} />
-        <LineStyled progress={1} active />
-      </ProgressBarStyled>
-    </ContainerStyled>
+        <Line progress={10} />
+        <Line progress={5} isActive />
+      </ProgressBar>
+    </Container>
   );
 };
-export default ProgressPanel;
+export default CockpitProgressBar;

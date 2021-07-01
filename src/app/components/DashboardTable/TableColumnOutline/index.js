@@ -23,7 +23,8 @@ const OutlineRight = styled(Outline)`
   height: 100%;
   width: 2px;
   top: 0;
-  right: -2px;
+  right: ${({ horizontalPosition }) =>
+    horizontalPosition ? horizontalPosition : "-2px"};
 `;
 const OutlinBottom = styled(Outline)`
   height: 2px;
@@ -34,18 +35,18 @@ const OutlineLeft = styled(Outline)`
   height: 100%;
   width: 2px;
   top: 0;
-  left: -2px;
+  left: ${({ horizontalPosition }) => (horizontalPosition ? horizontalPosition : "-2px")};
 `;
-
-const MultiPartColumnOutline = ({ isActive }) => {
+//??horizontalPosition
+const TableColumnOutline = ({ isActive, horizontalPosition }) => {
   return (
     <>
       <OutlineTop isActive={isActive} />
-      <OutlineRight isActive={isActive} />
+      <OutlineRight isActive={isActive} horizontalPosition={horizontalPosition} />
       <OutlinBottom isActive={isActive} />
-      <OutlineLeft isActive={isActive} />
+      <OutlineLeft isActive={isActive} horizontalPosition={horizontalPosition} />
       <OutlineMask />
     </>
   );
 };
-export default MultiPartColumnOutline;
+export default TableColumnOutline;

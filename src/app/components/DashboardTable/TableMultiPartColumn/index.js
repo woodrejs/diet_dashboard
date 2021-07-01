@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 import TableHeader from "../TableHeader";
+import TableColumnOutline from "../TableColumnOutline";
 import MultiPartColumnCell from "./MultiPartColumnCell";
 import MultiPartColumnFooter from "./MultiPartColumnFooter";
-import MultiPartColumnOutline from "./MultiPartColumnOutline";
 
 const Container = styled.div`
   height: 100%;
@@ -13,42 +13,22 @@ const Container = styled.div`
   border-right: 2px solid ${({ theme }) => theme.colors.light};
 `;
 
-const TableMultiPartColumn = ({ isActive, data, day }) => {
+const TableMultiPartColumn = ({ isActive, data, day, workoutCompleted }) => {
   return (
     <Container>
       <TableHeader day={day} />
-      <MultiPartColumnCell
-        text="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-        isShake
-        isActive
-        isCompleted
-      />
-      <MultiPartColumnCell
-        text="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-        isShake
-        isActive
-        isCompleted
-      />
-      <MultiPartColumnCell
-        text="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-        isShake
-        isActive
-        isCompleted
-      />
-      <MultiPartColumnCell
-        text="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-        isShake
-        isActive
-        isCompleted
-      />
-      <MultiPartColumnCell
-        text="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-        isShake
-        isActive
-        isCompleted
-      />
-      <MultiPartColumnFooter />
-      <MultiPartColumnOutline isActive={false} />
+
+      {data.map(({ id, text, isShake, isCompleted }) => (
+        <MultiPartColumnCell
+          key={id}
+          text={text}
+          isActive={isActive}
+          isShake={isShake}
+          isCompleted={isCompleted}
+        />
+      ))}
+      <MultiPartColumnFooter isCompleted={workoutCompleted} />
+      <TableColumnOutline isActive={isActive} />
     </Container>
   );
 };

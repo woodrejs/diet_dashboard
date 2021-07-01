@@ -34,35 +34,36 @@ const dummyData = [
   {
     id: uuidv4(),
     day: "64",
+    workoutCompleted: true,
     meals: [
       {
         id: uuidv4(),
-        title: "Bod•ē Shake",
-        completed: true,
+        text: "Bod•ē Shake",
+        isCompleted: true,
         isShake: true,
       },
       {
         id: uuidv4(),
-        title: "Ham and Swiss Roll Ups",
-        completed: true,
+        text: "Ham and Swiss Roll Ups",
+        isCompleted: true,
         isShake: false,
       },
       {
         id: uuidv4(),
-        title: "Turkey Melt",
-        completed: true,
+        text: "Turkey Melt",
+        isCompleted: true,
         isShake: false,
       },
       {
         id: uuidv4(),
-        title: "Bod•ē Burn with Mozzarella and Tomato Slices",
-        completed: true,
+        text: "Bod•ē Burn with Mozzarella and Tomato Slices",
+        isCompleted: true,
         isShake: false,
       },
       {
         id: uuidv4(),
-        title: "Turkey Melt",
-        completed: false,
+        text: "Turkey Melt",
+        isCompleted: false,
         isShake: false,
       },
     ],
@@ -70,35 +71,36 @@ const dummyData = [
   {
     id: uuidv4(),
     day: "65",
+    workoutCompleted: true,
     meals: [
       {
         id: uuidv4(),
-        title: "Bod•ē Shake",
-        completed: false,
+        text: "Bod•ē Shake",
+        isCompleted: false,
         isShake: true,
       },
       {
         id: uuidv4(),
-        title: "Ham and Swiss Roll Ups",
-        completed: false,
+        text: "Ham and Swiss Roll Ups",
+        isCompleted: false,
         isShake: false,
       },
       {
         id: uuidv4(),
-        title: "Turkey Melt",
-        completed: false,
+        text: "Turkey Melt",
+        isCompleted: false,
         isShake: false,
       },
       {
         id: uuidv4(),
-        title: "Bod•ē Burn with Mozzarella and Tomato Slices",
-        completed: false,
+        text: "Bod•ē Burn with Mozzarella and Tomato Slices",
+        isCompleted: false,
         isShake: false,
       },
       {
         id: uuidv4(),
-        title: "Turkey Melt",
-        completed: false,
+        text: "Turkey Melt",
+        isCompleted: false,
         isShake: false,
       },
     ],
@@ -106,35 +108,36 @@ const dummyData = [
   {
     id: uuidv4(),
     day: "66",
+    workoutCompleted: false,
     meals: [
       {
         id: uuidv4(),
-        title: "Bod•ē Shake",
-        completed: false,
+        text: "Bod•ē Shake",
+        isCompleted: false,
         isShake: true,
       },
       {
         id: uuidv4(),
-        title: "Grilled Steak (HC)",
-        completed: false,
+        text: "Grilled Steak (HC)",
+        isCompleted: false,
         isShake: false,
       },
       {
         id: uuidv4(),
-        title: "Bod•ē Shake",
-        completed: false,
+        text: "Bod•ē Shake",
+        isCompleted: false,
         isShake: true,
       },
       {
         id: uuidv4(),
-        title: "Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray",
-        completed: false,
+        text: "Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray",
+        isCompleted: false,
         isShake: false,
       },
       {
         id: uuidv4(),
-        title: "Garlic Lime Chicken (HC)",
-        completed: false,
+        text: "Garlic Lime Chicken (HC)",
+        isCompleted: false,
         isShake: false,
       },
     ],
@@ -142,35 +145,36 @@ const dummyData = [
   {
     id: uuidv4(),
     day: "67",
+    workoutCompleted: false,
     meals: [
       {
         id: uuidv4(),
-        title: "Bod•ē Shake",
-        completed: false,
+        text: "Bod•ē Shake",
+        isCompleted: false,
         isShake: true,
       },
       {
         id: uuidv4(),
-        title: "Ham and Swiss Roll Ups",
-        completed: false,
+        text: "Ham and Swiss Roll Ups",
+        isCompleted: false,
         isShake: false,
       },
       {
         id: uuidv4(),
-        title: "Turkey Melt",
-        completed: false,
+        text: "Turkey Melt",
+        isCompleted: false,
         isShake: false,
       },
       {
         id: uuidv4(),
-        title: "Bod•ē Burn with Mozzarella and Tomato Slices",
-        completed: false,
+        text: "Bod•ē Burn with Mozzarella and Tomato Slices",
+        isCompleted: false,
         isShake: false,
       },
       {
         id: uuidv4(),
-        title: "Turkey Melt",
-        completed: false,
+        text: "Turkey Melt",
+        isCompleted: false,
         isShake: false,
       },
     ],
@@ -178,35 +182,36 @@ const dummyData = [
   {
     id: uuidv4(),
     day: "68",
+    workoutCompleted: false,
     meals: [
       {
         id: uuidv4(),
-        title: "Bod•ē Shake",
-        completed: false,
+        text: "Bod•ē Shake",
+        isCompleted: false,
         isShake: true,
       },
       {
         id: uuidv4(),
-        title: "Ham and Swiss Roll Ups",
-        completed: false,
+        text: "Ham and Swiss Roll Ups",
+        isCompleted: false,
         isShake: false,
       },
       {
         id: uuidv4(),
-        title: "Bod•ē Shake",
-        completed: false,
+        text: "Bod•ē Shake",
+        isCompleted: false,
         isShake: true,
       },
       {
         id: uuidv4(),
-        title: "Bod•ē Burn with Mozzarella and Tomato Slices",
-        completed: false,
+        text: "Bod•ē Burn with Mozzarella and Tomato Slices",
+        isCompleted: false,
         isShake: false,
       },
       {
         id: uuidv4(),
-        title: "Turkey Melt",
-        completed: false,
+        text: "Turkey Melt",
+        isCompleted: false,
         isShake: false,
       },
     ],
@@ -214,35 +219,36 @@ const dummyData = [
   {
     id: uuidv4(),
     day: "69",
+    workoutCompleted: false,
     meals: [
       {
         id: uuidv4(),
-        title: "Bod•ē Shake",
-        completed: false,
+        text: "Bod•ē Shake",
+        isCompleted: false,
         isShake: true,
       },
       {
         id: uuidv4(),
-        title: "Grilled Steak (HC)",
-        completed: false,
+        text: "Grilled Steak (HC)",
+        isCompleted: false,
         isShake: false,
       },
       {
         id: uuidv4(),
-        title: "Bod•ē Shake",
-        completed: false,
+        text: "Bod•ē Shake",
+        isCompleted: false,
         isShake: true,
       },
       {
         id: uuidv4(),
-        title: "Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray",
-        completed: false,
+        text: "Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray",
+        isCompleted: false,
         isShake: false,
       },
       {
         id: uuidv4(),
-        title: "Garlic Lime Chicken (HC)",
-        completed: false,
+        text: "Garlic Lime Chicken (HC)",
+        isCompleted: false,
         isShake: false,
       },
     ],
@@ -253,6 +259,7 @@ const dummyData = [
     meals: [],
   },
 ];
+const dummyDay = "65";
 
 const DashboardTable = () => {
   return (
@@ -261,14 +268,23 @@ const DashboardTable = () => {
         <Table>
           <TableTimeColumn />
 
-          <TableMultiPartColumn />
-          <TableMultiPartColumn />
-          <TableMultiPartColumn />
-          <TableMultiPartColumn />
-          <TableMultiPartColumn />
-          <TableMultiPartColumn />
-
-          <TableSinglePartColumn />
+          {dummyData.map(({ id, meals, day, workoutCompleted }) =>
+            meals.length ? (
+              <TableMultiPartColumn
+                key={id}
+                data={meals}
+                day={day}
+                workoutCompleted={workoutCompleted}
+                isActive={dummyDay === day ? true : false}
+              />
+            ) : (
+              <TableSinglePartColumn
+                key={id}
+                day={day}
+                isActive={dummyDay === day ? true : false}
+              />
+            )
+          )}
         </Table>
       </Container>
     </Section>

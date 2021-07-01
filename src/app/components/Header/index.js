@@ -1,21 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import Menu from "./Menu";
-import AccountBar from "./AccountBar";
-import { fifth, white } from "../../style/colors";
+
+import HeaderMenuBar from "./HeaderMenuBar";
+import HeaderAccountBar from "./HeaderAccountBar";
 
 //??? shadow blur ???
-const SectionStyled = styled.div`
+const Section = styled.div`
   width: 100%;
-  border-bottom: 1px solid ${fifth};
-  background-color: ${white};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.lighter};
+  background-color: ${({ theme }) => theme.colors.white};
 
   -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.13);
   -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.13);
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.13);
 `;
-
-const ContainerStyled = styled.div`
+const Container = styled.div`
   max-width: 1024px;
   width: 100%;
   height: 80px;
@@ -27,12 +26,12 @@ const ContainerStyled = styled.div`
 
 const Header = () => {
   return (
-    <SectionStyled>
-      <ContainerStyled>
-        <Menu />
-        <AccountBar />
-      </ContainerStyled>
-    </SectionStyled>
+    <Section>
+      <Container>
+        <HeaderMenuBar />
+        <HeaderAccountBar />
+      </Container>
+    </Section>
   );
 };
 export default Header;
