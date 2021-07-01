@@ -7,3 +7,5 @@ export const eighth = "#bdbdbd";
 export const ninth = "#dbdbdb";
 export const background = "#f9f9f9";
 export const white = "#ffffff";
+export const ten = "#828282";
+export const black = "#000000";
