@@ -1,14 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-const OutlineMask = styled.div`
-  position: absolute;
-  height: 70px;
-  width: 2px;
-  bottom: 0px;
-  right: -2px;
-  background-color: rgba(0, 0, 0, 0.08);
-`;
 const Outline = styled.div`
   position: absolute;
   background-color: ${({ theme, isActive }) =>
@@ -23,8 +15,7 @@ const OutlineRight = styled(Outline)`
   height: 100%;
   width: 2px;
   top: 0;
-  right: ${({ horizontalPosition }) =>
-    horizontalPosition ? horizontalPosition : "-2px"};
+  right: ${({ right }) => (right ? right : "-2px")};
 `;
 const OutlinBottom = styled(Outline)`
   height: 2px;
@@ -38,14 +29,13 @@ const OutlineLeft = styled(Outline)`
   left: ${({ horizontalPosition }) => (horizontalPosition ? horizontalPosition : "-2px")};
 `;
 //??horizontalPosition
-const TableColumnOutline = ({ isActive, horizontalPosition }) => {
+const TableColumnOutline = ({ isActive, right }) => {
   return (
     <>
       <OutlineTop isActive={isActive} />
-      <OutlineRight isActive={isActive} horizontalPosition={horizontalPosition} />
+      <OutlineRight isActive={isActive} right={right} />
       <OutlinBottom isActive={isActive} />
-      <OutlineLeft isActive={isActive} horizontalPosition={horizontalPosition} />
-      <OutlineMask />
+      <OutlineLeft isActive={isActive} />
     </>
   );
 };

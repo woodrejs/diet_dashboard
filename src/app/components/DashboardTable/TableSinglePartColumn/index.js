@@ -9,13 +9,11 @@ import printIcon from "./print_icon.png";
 const Container = styled.div`
   width: 125px;
   height: 100%;
-  border-top-right-radius: 5px;
-  overflow: hidden;
   position: relative;
 `;
 const Cell = styled.div`
   height: 460px;
-  border-top: 2px solid ${({ theme }) => theme.colors.light};
+  border-top: 2px solid ${({ theme }) => theme.colors.lightLighter};
   padding-bottom: 2px;
 
   background-color: ${({ theme }) => theme.colors.white};
@@ -36,7 +34,7 @@ const CellText = styled.span`
   font-size: 35px;
   line-height: 46px;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.textLighter};
+  color: #c2c2c2;
 
   writing-mode: vertical-rl;
   text-orientation: mixed;
@@ -50,6 +48,7 @@ const CellIcon = styled.img`
 const Footer = styled.div`
   height: 70px;
   width: 100%;
+  cursor: pointer;
 
   display: flex;
   justify-content: center;
@@ -71,7 +70,7 @@ const FooterText = styled.span`
   font-size: 18px;
   line-height: 16px;
   text-transform: capitalize;
-  color: ${({ theme }) => theme.colors.gray};
+  color: ${({ theme }) => theme.colors.darkLightest};
 `;
 
 const TableSinglePartColumn = ({ day, isActive }) => {
@@ -90,7 +89,7 @@ const TableSinglePartColumn = ({ day, isActive }) => {
           <FooterText>print</FooterText>
         </FooterBox>
       </Footer>
-      <TableColumnOutline isActive={isActive} horizontalPosition="0" />
+      <TableColumnOutline isActive={isActive} right="0" />
     </Container>
   );
 };

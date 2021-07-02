@@ -5,13 +5,14 @@ import weightGrayIcon from "./weight_gray_icon.png";
 import arrowIcon from "./sm_arrow_icon.png";
 
 const Container = styled.div`
-  width: 100%;
+  width: 128px;
   height: 70px;
+  border-right: 2px solid rgba(0, 0, 0, 0.08);
 `;
 const TextBox = styled.div`
   height: 35px;
   width: 100%;
-
+  padding-left: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,14 +23,14 @@ const Text = styled.span`
   font-size: 11px;
   line-height: 16px;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.textLight}; ;
+  color: ${({ theme }) => theme.colors.darkLighter}; ;
 `;
 const ButtonBox = styled.div`
   height: 35px;
   width: 100%;
   position: relative;
   border-top: 2px solid rgba(0, 0, 0, 0.08);
-  padding-bottom: 2px;
+  padding: 0 0 2px 2px;
   cursor: pointer;
 
   display: flex;

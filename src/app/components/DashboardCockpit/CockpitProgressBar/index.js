@@ -16,7 +16,7 @@ const Text = styled.span`
   line-height: 100%;
   margin: 34px 0 14px 0;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.lightest};
+  color: ${({ theme }) => theme.colors.neutralLightest};
 `;
 const ProgressBar = styled.div`
   position: relative;
@@ -30,7 +30,7 @@ const Line = styled.div`
   width: 230px;
   height: 2px;
   background-color: ${({ isActive, theme }) =>
-    isActive ? theme.colors.primary : theme.colors.lightest};
+    isActive ? theme.colors.primary : theme.colors.light};
   transform: scaleX(${({ progress }) => progress / 10});
   transform-origin: left;
 `;

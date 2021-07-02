@@ -16,10 +16,6 @@ const GloblStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body{
-    background-color: "#f9f9f9";
-  }
-
   @font-face {
         font-family: 'HelveticaNeueLTStd';
         src: local('HelveticaNeueLTStd'), local('HelveticaNeueLTStd'),

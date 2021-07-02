@@ -17,7 +17,7 @@ const Text = styled.span`
   line-height: 100%;
   margin: 34px 0 14px 0;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.lightest};
+  color: ${({ theme }) => theme.colors.neutralLightest};
 `;
 const ButtonBox = styled.div`
   margin-top: 13px;

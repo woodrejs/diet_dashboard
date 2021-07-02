@@ -7,22 +7,25 @@ import TableSinglePartColumn from "./TableSinglePartColumn";
 import TableMultiPartColumn from "./TableMultiPartColumn";
 import mask_img from "./mask_img.jpg";
 
-const Section = styled.div`
-  width: 100%;
-  height: 580px;
-  margin-bottom: 20vh;
-`;
 const Container = styled.div`
   max-width: 1024px;
-  height: 100%;
+  height: 580px;
   width: 100%;
   padding: 0 23px;
   margin: 0 auto;
   display: flex;
+
+  
+`;
+const Section = styled.div`
+  width: 100%;
+  height: 580px;
 `;
 const Table = styled.div`
   width: 100%;
   display: flex;
+  border-radius: 5px;
+  overflow: hidden;
 
   background-image: url(${mask_img});
   background-position: left;

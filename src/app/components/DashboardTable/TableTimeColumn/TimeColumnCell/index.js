@@ -14,7 +14,7 @@ const Text = styled.span`
   font-weight: 200;
   font-size: 13px;
   line-height: 46px;
-  color: ${({ theme }) => theme.colors.textLight};
+  color: ${({ theme }) => theme.colors.darkLighter};
   text-transform: uppercase;
 `;
 const SubText = styled(Text)`

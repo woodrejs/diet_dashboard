@@ -17,7 +17,7 @@ const Text = styled.span`
   line-height: 46px;
   padding: 0 10px;
   text-transform: capitalize;
-  color: ${({ theme }) => theme.colors.grayDark};
+  color: ${({ theme }) => theme.colors.dark};
 `;
 const Avatar = styled.img`
   width: 34px;

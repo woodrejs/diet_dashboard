@@ -14,9 +14,10 @@ const setBackground = (isShake, isActive) => {
 };
 const Container = styled.div`
   height: 92px;
-  border-top: 2px solid ${({ theme }) => theme.colors.light};
+  border-top: 2px solid ${({ theme }) => theme.colors.lightLighter};
   padding: 6px 6px 8px 8px;
   background-color: ${({ theme }) => theme.colors.white};
+  cursor: pointer;
 
   display: flex;
   justify-content: space-between;
@@ -32,7 +33,7 @@ const Text = styled.span`
   line-height: 18px;
   text-transform: capitalize;
   color: ${({ theme, isActive }) =>
-    isActive ? theme.colors.textDark : theme.colors.textLight};
+    isActive ? theme.colors.black : theme.colors.darkLighter};
 `;
 const Icon = styled.img`
   width: 17px;

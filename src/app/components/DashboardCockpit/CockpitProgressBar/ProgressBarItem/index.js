@@ -16,10 +16,10 @@ const Sphere = styled.div`
   margin-bottom: 5px;
   border: 2px solid
     ${({ isCompleted, theme }) =>
-      isCompleted ? theme.colors.primary : theme.colors.lightest};
+      isCompleted ? theme.colors.primary : theme.colors.light};
 
   background-color: ${({ isCompleted, theme }) =>
-    isCompleted ? theme.colors.primary : theme.colors.lightest};
+    isCompleted ? theme.colors.primary : theme.colors.light};
 
   background-color: ${({ current, theme }) => current && theme.colors.white};
 `;
@@ -28,7 +28,7 @@ const Label = styled.span`
   font-weight: 400;
   font-size: 9px;
   line-height: 100%;
-  color: ${({ theme }) => theme.colors.textLight};
+  color: ${({ theme }) => theme.colors.darkLighter};
 `;
 
 const ProgressBarItem = ({ title, isCompleted = false, current = false }) => {

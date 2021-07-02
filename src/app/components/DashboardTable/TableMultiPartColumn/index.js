@@ -10,7 +10,7 @@ const Container = styled.div`
   height: 100%;
   width: 128px;
   position: relative;
-  border-right: 2px solid ${({ theme }) => theme.colors.light};
+  border-right: 2px solid ${({ theme }) => theme.colors.lightLighter};
 `;
 
 const TableMultiPartColumn = ({ isActive, data, day, workoutCompleted }) => {

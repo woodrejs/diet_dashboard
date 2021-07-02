@@ -8,7 +8,7 @@ const Container = styled.div`
   padding: 16px;
   display: flex;
   align-items: center;
-  border-left: 1px solid ${({ theme }) => theme.colors.lighter};
+  border-left: 1px solid ${({ theme }) => theme.colors.light};
 `;
 
 const HeaderMenuBar = () => {

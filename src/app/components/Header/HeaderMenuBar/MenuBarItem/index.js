@@ -16,7 +16,7 @@ const Text = styled.span`
   line-height: 46px;
   text-transform: uppercase;
   color: ${({ isActive, theme }) =>
-    isActive ? theme.colors.secondary : theme.colors.grayDark};
+    isActive ? theme.colors.secondary : theme.colors.dark};
 `;
 const Line = styled.div`
   position: absolute;
@@ -24,7 +24,7 @@ const Line = styled.div`
   height: 2px;
   bottom: 22px;
   background-color: ${({ isActive, theme }) =>
-    isActive ? theme.colors.secondary : theme.colors.grayDark};
+    isActive ? theme.colors.secondary : theme.colors.dark};
 `;
 
 const MenuBarItem = ({ isActive, title }) => {
