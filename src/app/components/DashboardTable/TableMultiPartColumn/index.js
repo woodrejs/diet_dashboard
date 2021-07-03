@@ -1,34 +1,24 @@
 import React from "react";
-import styled from "styled-components";
+import { Container } from "./index.css";
 
 import TableHeader from "../TableHeader";
 import TableColumnOutline from "../TableColumnOutline";
 import MultiPartColumnCell from "./MultiPartColumnCell";
 import MultiPartColumnFooter from "./MultiPartColumnFooter";
 
-const Container = styled.div`
-  height: 100%;
-  width: 128px;
-  position: relative;
-  border-right: 2px solid ${({ theme }) => theme.colors.lightLighter};
-`;
-
-const TableMultiPartColumn = ({ isActive, data, day, workoutCompleted }) => {
+const TableMultiPartColumn = ({ data, day, active }) => {
+  const { highCarbon, workoutCompleted, meals } = data;
   return (
     <Container>
       <TableHeader day={day} />
 
-      {data.map(({ id, text, isShake, isCompleted }) => (
-        <MultiPartColumnCell
-          key={id}
-          text={text}
-          isActive={isActive}
-          isShake={isShake}
-          isCompleted={isCompleted}
-        />
+      {meals.map((meal) => (
+        <MultiPartColumnCell key={meal.id} data={meal} active={active} />
       ))}
-      <MultiPartColumnFooter isCompleted={workoutCompleted} />
-      <TableColumnOutline isActive={isActive} />
+
+      <MultiPartColumnFooter isCompleted={workoutCompleted} highCarbon={highCarbon} />
+
+      <TableColumnOutline active={active} />
     </Container>
   );
 };

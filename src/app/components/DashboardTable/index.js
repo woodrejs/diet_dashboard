@@ -1,293 +1,34 @@
 import React from "react";
-import styled from "styled-components";
-import { v4 as uuidv4 } from "uuid";
-
 import TableTimeColumn from "./TableTimeColumn";
-import TableSinglePartColumn from "./TableSinglePartColumn";
-import TableMultiPartColumn from "./TableMultiPartColumn";
-import mask_img from "./mask_img.jpg";
-
-const Container = styled.div`
-  max-width: 1024px;
-  height: 580px;
-  width: 100%;
-  padding: 0 23px;
-  margin: 0 auto;
-  display: flex;
-
-  
-`;
-const Section = styled.div`
-  width: 100%;
-  height: 580px;
-`;
-const Table = styled.div`
-  width: 100%;
-  display: flex;
-  border-radius: 5px;
-  overflow: hidden;
-
-  background-image: url(${mask_img});
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
-`;
-
-const dummyData = [
-  {
-    id: uuidv4(),
-    day: "64",
-    workoutCompleted: true,
-    meals: [
-      {
-        id: uuidv4(),
-        text: "Bod•ē Shake",
-        isCompleted: true,
-        isShake: true,
-      },
-      {
-        id: uuidv4(),
-        text: "Ham and Swiss Roll Ups",
-        isCompleted: true,
-        isShake: false,
-      },
-      {
-        id: uuidv4(),
-        text: "Turkey Melt",
-        isCompleted: true,
-        isShake: false,
-      },
-      {
-        id: uuidv4(),
-        text: "Bod•ē Burn with Mozzarella and Tomato Slices",
-        isCompleted: true,
-        isShake: false,
-      },
-      {
-        id: uuidv4(),
-        text: "Turkey Melt",
-        isCompleted: false,
-        isShake: false,
-      },
-    ],
-  },
-  {
-    id: uuidv4(),
-    day: "65",
-    workoutCompleted: true,
-    meals: [
-      {
-        id: uuidv4(),
-        text: "Bod•ē Shake",
-        isCompleted: false,
-        isShake: true,
-      },
-      {
-        id: uuidv4(),
-        text: "Ham and Swiss Roll Ups",
-        isCompleted: false,
-        isShake: false,
-      },
-      {
-        id: uuidv4(),
-        text: "Turkey Melt",
-        isCompleted: false,
-        isShake: false,
-      },
-      {
-        id: uuidv4(),
-        text: "Bod•ē Burn with Mozzarella and Tomato Slices",
-        isCompleted: false,
-        isShake: false,
-      },
-      {
-        id: uuidv4(),
-        text: "Turkey Melt",
-        isCompleted: false,
-        isShake: false,
-      },
-    ],
-  },
-  {
-    id: uuidv4(),
-    day: "66",
-    workoutCompleted: false,
-    meals: [
-      {
-        id: uuidv4(),
-        text: "Bod•ē Shake",
-        isCompleted: false,
-        isShake: true,
-      },
-      {
-        id: uuidv4(),
-        text: "Grilled Steak (HC)",
-        isCompleted: false,
-        isShake: false,
-      },
-      {
-        id: uuidv4(),
-        text: "Bod•ē Shake",
-        isCompleted: false,
-        isShake: true,
-      },
-      {
-        id: uuidv4(),
-        text: "Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray",
-        isCompleted: false,
-        isShake: false,
-      },
-      {
-        id: uuidv4(),
-        text: "Garlic Lime Chicken (HC)",
-        isCompleted: false,
-        isShake: false,
-      },
-    ],
-  },
-  {
-    id: uuidv4(),
-    day: "67",
-    workoutCompleted: false,
-    meals: [
-      {
-        id: uuidv4(),
-        text: "Bod•ē Shake",
-        isCompleted: false,
-        isShake: true,
-      },
-      {
-        id: uuidv4(),
-        text: "Ham and Swiss Roll Ups",
-        isCompleted: false,
-        isShake: false,
-      },
-      {
-        id: uuidv4(),
-        text: "Turkey Melt",
-        isCompleted: false,
-        isShake: false,
-      },
-      {
-        id: uuidv4(),
-        text: "Bod•ē Burn with Mozzarella and Tomato Slices",
-        isCompleted: false,
-        isShake: false,
-      },
-      {
-        id: uuidv4(),
-        text: "Turkey Melt",
-        isCompleted: false,
-        isShake: false,
-      },
-    ],
-  },
-  {
-    id: uuidv4(),
-    day: "68",
-    workoutCompleted: false,
-    meals: [
-      {
-        id: uuidv4(),
-        text: "Bod•ē Shake",
-        isCompleted: false,
-        isShake: true,
-      },
-      {
-        id: uuidv4(),
-        text: "Ham and Swiss Roll Ups",
-        isCompleted: false,
-        isShake: false,
-      },
-      {
-        id: uuidv4(),
-        text: "Bod•ē Shake",
-        isCompleted: false,
-        isShake: true,
-      },
-      {
-        id: uuidv4(),
-        text: "Bod•ē Burn with Mozzarella and Tomato Slices",
-        isCompleted: false,
-        isShake: false,
-      },
-      {
-        id: uuidv4(),
-        text: "Turkey Melt",
-        isCompleted: false,
-        isShake: false,
-      },
-    ],
-  },
-  {
-    id: uuidv4(),
-    day: "69",
-    workoutCompleted: false,
-    meals: [
-      {
-        id: uuidv4(),
-        text: "Bod•ē Shake",
-        isCompleted: false,
-        isShake: true,
-      },
-      {
-        id: uuidv4(),
-        text: "Grilled Steak (HC)",
-        isCompleted: false,
-        isShake: false,
-      },
-      {
-        id: uuidv4(),
-        text: "Bod•ē Shake",
-        isCompleted: false,
-        isShake: true,
-      },
-      {
-        id: uuidv4(),
-        text: "Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray",
-        isCompleted: false,
-        isShake: false,
-      },
-      {
-        id: uuidv4(),
-        text: "Garlic Lime Chicken (HC)",
-        isCompleted: false,
-        isShake: false,
-      },
-    ],
-  },
-  {
-    id: uuidv4(),
-    day: "70",
-    meals: [],
-  },
-];
-const dummyDay = "65";
+import { displayTableColumns } from "./index.utils";
+import dummyData from "../../../dummyData";
+import arrow_icon from "./icon_large_arrow.png";
+import {
+  Container,
+  Section,
+  Table,
+  TableBody,
+  ButtonLeft,
+  ButtonRight,
+} from "./index.css";
 
 const DashboardTable = () => {
+  const handleShowNextColumns = () => {
+    /*place for code ... */
+  };
+  const handleShowPrevColumns = () => {
+    /*place for code ... */
+  };
   return (
     <Section>
       <Container>
         <Table>
           <TableTimeColumn />
+          <TableBody children={displayTableColumns(dummyData.days, dummyData.currDay)} />
 
-          {dummyData.map(({ id, meals, day, workoutCompleted }) =>
-            meals.length ? (
-              <TableMultiPartColumn
-                key={id}
-                data={meals}
-                day={day}
-                workoutCompleted={workoutCompleted}
-                isActive={dummyDay === day ? true : false}
-              />
-            ) : (
-              <TableSinglePartColumn
-                key={id}
-                day={day}
-                isActive={dummyDay === day ? true : false}
-              />
-            )
-          )}
+          {/* buttons visible on tablet & mobile only */}
+          <ButtonLeft onClick={handleShowPrevColumns} src={arrow_icon} alt="prev_btn" />
+          <ButtonRight onClick={handleShowNextColumns} src={arrow_icon} alt="next_btn" />
         </Table>
       </Container>
     </Section>

@@ -9,7 +9,11 @@ import FooterCard from "./FooterCard";
 
 const Section = styled.div`
   width: 100%;
-  padding: 45px 0;
+  padding: 50px 0;
+
+  @media ${({ theme }) => theme.device.mobileLandscape} {
+    padding: 25px 0;
+  }
 `;
 const Container = styled.div`
   max-width: 1024px;
@@ -19,10 +23,28 @@ const Container = styled.div`
 
   position: relative;
   display: flex;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    justify-content: space-between;
+  }
+  @media ${({ theme }) => theme.device.mobileLandscape} {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const Line = styled.div`
   width: 1px;
   background-color: ${({ theme }) => theme.colors.light};
+
+  @media ${({ theme }) => theme.device.tablet} {
+    display: none;
+  }
+  @media ${({ theme }) => theme.device.mobileLandscape} {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 0;
+  }
 `;
 const LineLeft = styled(Line)`
   margin-left: 45px;

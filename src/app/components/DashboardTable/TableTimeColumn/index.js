@@ -1,13 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import { Container } from "./index.css";
 import TimeColumnCell from "./TimeColumnCell";
 import TimeColumnFooter from "./TimeColumnFooter";
-
-const Container = styled.div`
-  height: 580px;
-  width: 85px;
-  padding-top: 52px;
-`;
 
 const TableTimeColumn = () => {
   return (

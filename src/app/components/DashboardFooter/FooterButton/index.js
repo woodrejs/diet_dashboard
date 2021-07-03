@@ -7,7 +7,7 @@ const Container = styled.div`
 
   height: 37px;
   border: 1px solid ${({ theme }) => theme.colors.neutralLighter};
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.lightLightest};
   padding: 13px;
 
   margin-right: 9px;
@@ -16,6 +16,15 @@ const Container = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    margin-right: 0;
+    margin-bottom: 9px;
+    justify-content: flex-end;
+  }
+  @media ${({ theme }) => theme.device.mobileLandscape} {
+    margin-right: 9px;
+  }
 `;
 const Text = styled.span`
   font-family: HelveticaNeueLTStd;
@@ -32,29 +41,6 @@ const Arrow = styled.img`
 const Icon = styled.img`
   margin-right: 10px;
 `;
-/*
-.Buy_now {
-.Lorem_ipsum_dolor_sit_amet__consect_turadipisci {
-  font-size: 4.763px;
-  font-family: "Arial";
-  color: rgb( 130, 130, 130 );
-  line-height: 1.4;
-  text-align: left;
-  -moz-transform: matrix( 3.19425813069175, 0, 0, 3.14939491975006, 0, 0);
-  -webkit-transform: matrix( 3.19425813069175, 0, 0, 3.14939491975006, 0, 0);
-  position: absolute;
-  left: 789px;
-  top: 902px;
-  width: 237px;
-  height: 35px;
-  z-index: 176;
-}
-
-}
-
-}
-
-*/
 
 const FooterButton = ({ src, title }) => {
   return (
