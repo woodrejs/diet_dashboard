@@ -1,7 +1,6 @@
 import React from "react";
 import { OutlineTop, OutlineRight, OutlinBottom, OutlineLeft } from "./index.css";
 
-//?? horizontalPosition ??
 const TableColumnOutline = ({ active, right }) => {
   return (
     <>

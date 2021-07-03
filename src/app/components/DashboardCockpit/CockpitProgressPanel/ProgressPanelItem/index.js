@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Sphere, Label } from "./index.css";
 
-const ProgressBarItem = ({ title, isCompleted = false, current = false }) => {
+const ProgressPanelItem = ({ title, isCompleted = false, current = false }) => {
   return (
     <Container>
       <Sphere isCompleted={isCompleted} current={current} />
@@ -10,4 +10,4 @@ const ProgressBarItem = ({ title, isCompleted = false, current = false }) => {
   );
 };
 
-export default ProgressBarItem;
+export default ProgressPanelItem;

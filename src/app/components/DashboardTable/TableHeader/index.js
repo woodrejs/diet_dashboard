@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Text } from "./index.css";
 
-const TableHeader = ({ day, isActive }) => {
+const TableHeader = ({ day, active }) => {
   return (
     <Container>
-      <Text isActive={isActive}>day {day}</Text>
+      <Text active={active}>day {day}</Text>
     </Container>
   );
 };

@@ -3,14 +3,18 @@ import { Container, Button, Title } from "./index.css";
 import icon_large_arrow from "./icon_large_arrow.png";
 
 const CockpitWeekSwitch = () => {
-  const handleClick = () => {
-    /*future handler*/
+  const handleShowNext = () => {
+    /*place for code ... */
   };
+  const handleShowPrev = () => {
+    /*place for code ... */
+  };
+
   return (
     <Container>
-      <Button onClick={handleClick} src={icon_large_arrow} alt="prev_arrow_icon" prev />
+      <Button onClick={handleShowPrev} src={icon_large_arrow} alt="prev_icon" prev />
       <Title>week 7</Title>
-      <Button onClick={handleClick} src={icon_large_arrow} alt="next_arrow_icon" />
+      <Button onClick={handleShowNext} src={icon_large_arrow} alt="next_icon" />
     </Container>
   );
 };

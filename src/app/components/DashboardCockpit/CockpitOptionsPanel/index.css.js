@@ -28,6 +28,4 @@ export const ButtonBox = styled.div`
   margin-top: 6px;
   padding-bottom: 2px;
 `;
-export const Button = styled.img`
-  cursor: pointer;
-`;
+

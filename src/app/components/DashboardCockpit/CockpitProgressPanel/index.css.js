@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { progressToScale } from "./index.utils";
 
 export const Container = styled.div`
   width: 230px;
@@ -20,7 +21,8 @@ export const Text = styled.span`
   line-height: 100%;
   margin-bottom: 13px;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.neutralLightest};
+  color: ${({ theme, progress }) =>
+    progress ? theme.colors.secondary : theme.colors.neutralLightest};
 `;
 export const ProgressBar = styled.div`
   position: relative;
@@ -30,12 +32,12 @@ export const ProgressBar = styled.div`
 export const Line = styled.div`
   top: 4px;
   left: 0px;
-  width: 230px;
+  width: 100%;
   height: 2px;
 
   position: absolute;
-  background-color: ${({ isActive, theme }) =>
-    isActive ? theme.colors.primary : theme.colors.light};
-  transform: scaleX(${({ progress }) => progress / 10});
+  background-color: ${({ progress, theme }) =>
+    progress ? theme.colors.primary : theme.colors.light};
+  transform: scaleX(${({ progress }) => progressToScale(progress)});
   transform-origin: left;
 `;

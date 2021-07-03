@@ -16,6 +16,10 @@ import {
 } from "./index.css.js";
 
 const TableSinglePartColumn = ({ day, active }) => {
+  const handleClick = () => {
+    /*place for code ... */
+  };
+
   return (
     <Container>
       <TableHeader day={day} />
@@ -28,7 +32,7 @@ const TableSinglePartColumn = ({ day, active }) => {
       </Cell>
 
       <Footer>
-        <FooterBox>
+        <FooterBox onClick={handleClick}>
           <FooterIcon src={print_icon} alt="print_icon" />
           <FooterText>print</FooterText>
         </FooterBox>

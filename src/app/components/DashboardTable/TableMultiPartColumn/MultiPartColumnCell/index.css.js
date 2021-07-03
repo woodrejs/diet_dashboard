@@ -23,8 +23,8 @@ export const Text = styled.span`
   line-height: 18px;
 
   font-family: Arial;
-  color: ${({ theme, active }) =>
-    active ? theme.colors.black : theme.colors.darkLighter};
+  color: ${({ theme, isChecked }) =>
+    isChecked ? theme.colors.black : theme.colors.darkLighter};
 `;
 export const Icon = styled.img`
   margin-top: -3px;

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, TextBox, Text, ButtonBox, Button, CheckIcon } from "./index.css";
 import weight_color_icon from "./icon_weight_color.png";
 import weight_gray_icon from "./icon_weight_gray.png";
 import arrow_icon from "./icon_sm_arrow.png";
 
 const MultiPartColumnFooter = ({ isCompleted, highCarbon }) => {
+  const [isChecked, setIsChecked] = useState(isCompleted);
+
+  const handleClick = () => setIsChecked((currState) => !currState);
+
   return (
     <Container>
       <TextBox>
@@ -12,13 +16,17 @@ const MultiPartColumnFooter = ({ isCompleted, highCarbon }) => {
       </TextBox>
 
       <ButtonBox>
-        {isCompleted ? (
+        {isChecked ? (
           <>
-            <Button src={weight_color_icon} alt="weight_color_icon" />
+            <Button
+              onClick={handleClick}
+              src={weight_color_icon}
+              alt="weight_color_icon"
+            />
             <CheckIcon src={arrow_icon} alt="arrow_icon" />
           </>
         ) : (
-          <Button src={weight_gray_icon} alt="weight_gray_icon" />
+          <Button onClick={handleClick} src={weight_gray_icon} alt="weight_gray_icon" />
         )}
       </ButtonBox>
     </Container>

@@ -10,7 +10,12 @@ import { v4 as uuidv4 } from "uuid";
       data:{
         highCarbon: bool,
         workoutCompleted:  bool,
-        meals:[],
+        meals:[{
+            id: uuidv4(),
+            text: "",
+            isCompleted: true,
+            isShake: true,
+          },],
       } 
     }
   ]

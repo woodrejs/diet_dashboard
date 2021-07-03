@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Text, Icon } from "./index.css";
 import check_icon from "./icon_check.png";
 
-//?? custom props ??
-const MultiPartColumnCell = ({ data, active }) => {
-  const { text, isCompleted, isShake } = data;
+const MultiPartColumnCell = ({ data: { text, isShake, isCompleted }, active }) => {
+  const [isChecked, setIsChecked] = useState(isCompleted);
+
+  const handleClick = () => setIsChecked((currState) => !currState);
+
   return (
-    <Container isShake={isShake} active={active}>
-      <Text active={active}>{text}</Text>
-      {isCompleted && <Icon src={check_icon} alt="check_icon" />}
+    <Container onClick={handleClick} isShake={isShake} active={active}>
+      <Text isChecked={isChecked}>{text}</Text>
+      {isChecked && <Icon src={check_icon} alt="check_icon" />}
     </Container>
   );
 };

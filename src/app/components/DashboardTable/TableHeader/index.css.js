@@ -16,6 +16,6 @@ export const Text = styled.span`
   line-height: 29px;
 
   text-transform: uppercase;
-  color: ${({ theme, isActive }) =>
-    isActive ? theme.colors.secondary : theme.colors.primary};
+  color: ${({ theme, active }) =>
+    active ? theme.colors.secondary : theme.colors.primary};
 `;
