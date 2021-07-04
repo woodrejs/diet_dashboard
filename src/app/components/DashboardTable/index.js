@@ -1,40 +1,35 @@
-import React, { useRef, useEffect, useState } from "react";
-import TableTimeColumn from "./TableTimeColumn";
+import React, { useRef, useEffect, useState, useCallback } from "react";
+import dummyData from "../../../dummyData";
+import { isActive, getSingleSlideWidth, isEmpty } from "./index.utils";
+import TableHeadersColumn from "./TableHeadersColumn";
+import TableShiftControlButtons from "./TableShiftControlButtons";
 import TableSinglePartColumn from "./TableSinglePartColumn";
 import TableMultiPartColumn from "./TableMultiPartColumn";
-import dummyData from "../../../dummyData";
-import arrow_icon from "./icon_large_arrow.png";
-import {
-  Container,
-  Section,
-  Table,
-  TableBody,
-  ButtonPrev,
-  ButtonNext,
-  Slider,
-} from "./index.css";
+
+import { Container, Section, Table, TableBody, Slider } from "./index.css";
 
 const DashboardTable = () => {
   const [sliderWidth, setSliderWidth] = useState(0);
-  const [slideWidth, setSlideWidth] = useState(0);
-  const [currSlide, setCurrSlide] = useState(0);
+  const [singleSlideWidth, setSingleSlideWidth] = useState(0);
+  const [sliderShift, setSliderShift] = useState(0);
 
-  const tableBodyRef = useRef(null);
-  const sliderRef = useRef(null);
+  const { days, currDay } = dummyData;
+  const Ref = useRef(null);
 
-  const handleShowNextColumns = () => {
-    const columnsOnScreen = Math.round(sliderWidth / slideWidth);
-    const columnsInTable = 7;
-    if (currSlide < columnsInTable - columnsOnScreen)
-      setCurrSlide((currState) => currState + 1);
-  };
-  const handleShowPrevColumns = () => {
-    currSlide && setCurrSlide((currState) => currState - 1);
-  };
+  const handleShowPrevSlide = useCallback(
+    () => sliderShift && setSliderShift((curr) => curr - 1),
+    [sliderShift]
+  );
+  const handleShowNextSlide = useCallback(() => {
+    const slidesOnScreen = Math.round(sliderWidth / singleSlideWidth);
+    const slidesInSlider = 7;
 
-  useEffect(() => setSliderWidth(sliderRef.current.clientWidth), []);
+    if (sliderShift < slidesInSlider - slidesOnScreen) setSliderShift((curr) => curr + 1);
+  }, [sliderShift, sliderWidth, singleSlideWidth]);
+
+  useEffect(() => setSliderWidth(Ref.current.clientWidth), []);
   useEffect(
-    () => setSlideWidth(tableBodyRef.current.firstChild.offsetWidth),
+    () => sliderWidth && setSingleSlideWidth(getSingleSlideWidth(sliderWidth)),
     [sliderWidth]
   );
 
@@ -42,36 +37,36 @@ const DashboardTable = () => {
     <Section>
       <Container>
         <Table>
-          <TableTimeColumn />
+          <TableHeadersColumn />
 
-          <Slider ref={sliderRef}>
-            <TableBody ref={tableBodyRef} shift={currSlide * slideWidth}>
-              {dummyData.days.map(({ id, data, day }) => {
-                const active = dummyData.currDay === day ? true : false;
-
-                return data.hasOwnProperty("meals") ? (
+          <Slider ref={Ref}>
+            <TableBody shift={sliderShift * singleSlideWidth}>
+              {days.map(({ id, data, day }) =>
+                isEmpty(data) ? (
+                  <TableSinglePartColumn
+                    key={id}
+                    day={day}
+                    active={isActive(currDay, day)}
+                    width={singleSlideWidth}
+                  />
+                ) : (
                   <TableMultiPartColumn
                     key={id}
                     data={data}
                     day={day}
-                    active={active}
-                    width={sliderWidth}
+                    active={isActive(currDay, day)}
+                    width={singleSlideWidth}
                   />
-                ) : (
-                  <TableSinglePartColumn
-                    key={id}
-                    day={day}
-                    active={active}
-                    width={sliderWidth}
-                  />
-                );
-              })}
+                )
+              )}
             </TableBody>
           </Slider>
 
           {/* buttons visible on tablet & mobile only */}
-          <ButtonNext onClick={handleShowNextColumns} src={arrow_icon} alt="next_btn" />
-          <ButtonPrev onClick={handleShowPrevColumns} src={arrow_icon} alt="prev_btn" />
+          <TableShiftControlButtons
+            handleNext={handleShowNextSlide}
+            handlePrev={handleShowPrevSlide}
+          />
         </Table>
       </Container>
     </Section>

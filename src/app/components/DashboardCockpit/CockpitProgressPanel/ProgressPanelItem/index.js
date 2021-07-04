@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Container, Sphere, Label } from "./index.css";
 
 const ProgressPanelItem = ({ title, isCompleted = false, current = false }) => {
@@ -10,4 +10,4 @@ const ProgressPanelItem = ({ title, isCompleted = false, current = false }) => {
   );
 };
 
-export default ProgressPanelItem;
+export default memo(ProgressPanelItem);

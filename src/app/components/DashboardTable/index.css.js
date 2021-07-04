@@ -37,26 +37,7 @@ export const TableBody = styled.div`
   display: flex;
   position: absolute;
   transform: ${({ shift }) => `translateX(-${shift}px)`};
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 `;
 
-const Button = styled.img`
-  height: 30px;
-  z-index: 100;
-  top: 10px;
 
-  position: absolute;
-  cursor: pointer;
-  display: none;
-  background-color: red;
-
-  @media ${({ theme }) => theme.device.tablet} {
-    display: block;
-  }
-`;
-export const ButtonPrev = styled(Button)`
-  left: 90px;
-  transform: rotateZ(180deg);
-`;
-export const ButtonNext = styled(Button)`
-  right: 5px;
-`;

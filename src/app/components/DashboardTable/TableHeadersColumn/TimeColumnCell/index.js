@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Container, Text, SubText } from "./index.css";
 
 const TimeColumnCell = ({ time, pm = false, last = false }) => {
@@ -9,4 +9,4 @@ const TimeColumnCell = ({ time, pm = false, last = false }) => {
     </Container>
   );
 };
-export default TimeColumnCell;
+export default memo(TimeColumnCell);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import { Container, TextBox, Text, ButtonBox, Button, CheckIcon } from "./index.css";
 import weight_color_icon from "./icon_weight_color.png";
 import weight_gray_icon from "./icon_weight_gray.png";
@@ -15,21 +15,17 @@ const MultiPartColumnFooter = ({ isCompleted, highCarbon }) => {
         <Text>{highCarbon ? "high-carb" : "low-carb"}</Text>
       </TextBox>
 
-      <ButtonBox>
+      <ButtonBox onClick={handleClick}>
         {isChecked ? (
           <>
-            <Button
-              onClick={handleClick}
-              src={weight_color_icon}
-              alt="weight_color_icon"
-            />
+            <Button src={weight_color_icon} alt="weight_color_icon" />
             <CheckIcon src={arrow_icon} alt="arrow_icon" />
           </>
         ) : (
-          <Button onClick={handleClick} src={weight_gray_icon} alt="weight_gray_icon" />
+          <Button src={weight_gray_icon} alt="weight_gray_icon" />
         )}
       </ButtonBox>
     </Container>
   );
 };
-export default MultiPartColumnFooter;
+export default memo(MultiPartColumnFooter);

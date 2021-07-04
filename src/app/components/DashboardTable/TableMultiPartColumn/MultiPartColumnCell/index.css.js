@@ -32,8 +32,8 @@ export const Text = styled.span`
   white-space: wrap;
 
   font-family: Arial;
-  color: ${({ theme, isChecked }) =>
-    isChecked ? theme.colors.black : theme.colors.darkLighter};
+  color: ${({ theme, active }) =>
+    active ? theme.colors.black : theme.colors.darkLighter};
 
   ${Container}:hover & {
     color: ${({ theme }) => theme.colors.black};

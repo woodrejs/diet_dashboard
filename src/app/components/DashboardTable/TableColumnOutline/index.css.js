@@ -24,5 +24,4 @@ export const OutlineLeft = styled(Outline)`
   height: 100%;
   width: 2px;
   top: 0;
-  left: ${({ horizontalPosition }) => (horizontalPosition ? horizontalPosition : "-2px")};
 `;

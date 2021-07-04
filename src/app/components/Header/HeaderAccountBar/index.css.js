@@ -13,9 +13,7 @@ export const Text = styled.span`
   font-weight: 400;
   font-size: 15px;
   line-height: 46px;
-  padding-right: 15px;
-  padding-left: 9px;
-  padding-top: 3px;
+  padding: 3px 10px 0 9px;
   letter-spacing: 0.3px;
 
   text-transform: capitalize;
@@ -26,8 +24,6 @@ export const Text = styled.span`
   }
 `;
 export const Avatar = styled.img`
-  width: 34px;
-  height: 34px;
   transition: 0.2s ease-in;
 
   ${Container}:hover & {
@@ -35,8 +31,6 @@ export const Avatar = styled.img`
   }
 `;
 export const Arrow = styled.img`
-  width: 4px;
-  height: 8px;
   padding-right: 2px;
   transform: rotateZ(90deg);
 `;

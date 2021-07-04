@@ -1,9 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import { Container } from "./index.css";
 import TimeColumnCell from "./TimeColumnCell";
 import TimeColumnFooter from "./TimeColumnFooter";
 
-const TableTimeColumn = () => {
+const TableHeadersColumn = () => {
   return (
     <Container>
       <TimeColumnCell time="6:00" />
@@ -16,4 +16,4 @@ const TableTimeColumn = () => {
     </Container>
   );
 };
-export default TableTimeColumn;
+export default memo(TableHeadersColumn);

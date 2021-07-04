@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Button } from "./index.css";
 
 const OptionsPanelButton = ({ src }) => {
@@ -7,4 +7,4 @@ const OptionsPanelButton = ({ src }) => {
   };
   return <Button onClick={handleClick} src={src} alt="options_panel_button" />;
 };
-export default OptionsPanelButton;
+export default memo(OptionsPanelButton);

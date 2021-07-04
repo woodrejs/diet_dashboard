@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import TableHeader from "../TableHeader";
 import TableColumnOutline from "../TableColumnOutline";
 import smile_icon from "./icon_smile.png";
@@ -42,4 +42,4 @@ const TableSinglePartColumn = ({ day, active, width }) => {
     </Container>
   );
 };
-export default TableSinglePartColumn;
+export default memo(TableSinglePartColumn);

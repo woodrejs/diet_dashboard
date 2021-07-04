@@ -35,13 +35,10 @@ export const ButtonBox = styled.div`
   border-top: 2px solid rgba(0, 0, 0, 0.08);
 
   :hover {
-    background-color: ${({ theme }) => theme.colors.darkLighter};
+    background-color: ${({ theme }) => theme.colors.light};
   }
 `;
 export const Button = styled.img`
-  height: 14px;
-  width: 28px;
-
   ${ButtonBox}:hover & {
     transform: scale(1.05);
   }

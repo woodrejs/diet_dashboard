@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Container, Text } from "./index.css";
 
 const TableHeader = ({ day, active }) => {
@@ -9,4 +9,4 @@ const TableHeader = ({ day, active }) => {
   );
 };
 
-export default TableHeader;
+export default memo(TableHeader);

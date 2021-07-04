@@ -21,7 +21,7 @@ import { v4 as uuidv4 } from "uuid";
   ]
 }
 */
-export default {
+const dummyData = {
   currDay: "65",
   days: [
     {
@@ -271,3 +271,4 @@ export default {
     },
   ],
 };
+export default dummyData;

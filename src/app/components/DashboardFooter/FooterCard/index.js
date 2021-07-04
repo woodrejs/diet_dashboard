@@ -1,4 +1,5 @@
-import React from "react";
+import React, { memo } from "react";
+import FooterButton from "../FooterButton";
 import { Container, Title, Text, ButtonsBox } from "./index.css";
 
 const FooterCard = ({ title, text, primaryButton, secondaryButton }) => {
@@ -7,10 +8,14 @@ const FooterCard = ({ title, text, primaryButton, secondaryButton }) => {
       <Title children={title} />
       <Text children={text} />
       <ButtonsBox>
-        {primaryButton}
-        {secondaryButton}
+        {primaryButton && (
+          <FooterButton src={primaryButton.src ?? null} title={primaryButton.title} />
+        )}
+        {secondaryButton && (
+          <FooterButton src={secondaryButton.src ?? null} title={secondaryButton.title} />
+        )}
       </ButtonsBox>
     </Container>
   );
 };
-export default FooterCard;
+export default memo(FooterCard);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { OutlineTop, OutlineRight, OutlinBottom, OutlineLeft } from "./index.css";
 
 const TableColumnOutline = ({ active, right }) => {
@@ -11,4 +11,4 @@ const TableColumnOutline = ({ active, right }) => {
     </>
   );
 };
-export default TableColumnOutline;
+export default memo(TableColumnOutline);

@@ -1,4 +1,6 @@
 import { device } from "./media";
 import { colors } from "./colors";
 
-export default { device, colors };
+const theme = { device, colors };
+
+export default theme;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Section, Container } from "./index.css";
 import CockpitProgressPanel from "./CockpitProgressPanel";
-import CockpitWeekSlider from "./CockpitWeekSlider";
+import CockpitSlider from "./CockpitSlider";
 import CockpitOptionsPanel from "./CockpitOptionsPanel";
 
 const DashboardCockpit = () => {
@@ -9,7 +9,7 @@ const DashboardCockpit = () => {
     <Section>
       <Container>
         <CockpitProgressPanel progress={7} />
-        <CockpitWeekSlider />
+        <CockpitSlider />
         <CockpitOptionsPanel />
       </Container>
     </Section>

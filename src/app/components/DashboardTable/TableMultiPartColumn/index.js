@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 import { Container } from "./index.css";
-import { displayMultiPartColumnCells } from "./index.utils";
 import TableHeader from "../TableHeader";
+import MultiPartColumnCell from "./MultiPartColumnCell";
 import TableColumnOutline from "../TableColumnOutline";
 import MultiPartColumnFooter from "./MultiPartColumnFooter";
 
@@ -10,11 +10,15 @@ const TableMultiPartColumn = ({ data, day, active, width }) => {
   return (
     <Container width={width}>
       <TableHeader day={day} />
-      {displayMultiPartColumnCells(meals, active)}
-      <MultiPartColumnFooter isCompleted={workoutCompleted} highCarbon={highCarbon} />
 
+      {/* display cells */}
+      {meals.map((item) => (
+        <MultiPartColumnCell key={item.id} data={item} active={active} />
+      ))}
+
+      <MultiPartColumnFooter isCompleted={workoutCompleted} highCarbon={highCarbon} />
       <TableColumnOutline active={active} />
     </Container>
   );
 };
-export default TableMultiPartColumn;
+export default memo(TableMultiPartColumn);

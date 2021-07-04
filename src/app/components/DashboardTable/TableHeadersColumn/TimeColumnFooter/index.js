@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Container, ContentBox, Text, Triangle } from "./index.css";
 
 const TimeColumnFooter = ({ title }) => {
@@ -12,4 +12,4 @@ const TimeColumnFooter = ({ title }) => {
   );
 };
 
-export default TimeColumnFooter;
+export default memo(TimeColumnFooter);
