@@ -15,13 +15,13 @@ import {
   FooterText,
 } from "./index.css.js";
 
-const TableSinglePartColumn = ({ day, active }) => {
+const TableSinglePartColumn = ({ day, active, width }) => {
   const handleClick = () => {
     /*place for code ... */
   };
 
   return (
-    <Container>
+    <Container width={width}>
       <TableHeader day={day} />
 
       <Cell>

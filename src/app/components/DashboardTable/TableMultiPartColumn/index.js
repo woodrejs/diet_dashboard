@@ -5,10 +5,10 @@ import TableHeader from "../TableHeader";
 import TableColumnOutline from "../TableColumnOutline";
 import MultiPartColumnFooter from "./MultiPartColumnFooter";
 
-const TableMultiPartColumn = ({ data, day, active }) => {
+const TableMultiPartColumn = ({ data, day, active, width }) => {
   const { highCarbon, workoutCompleted, meals } = data;
   return (
-    <Container>
+    <Container width={width}>
       <TableHeader day={day} />
       {displayMultiPartColumnCells(meals, active)}
       <MultiPartColumnFooter isCompleted={workoutCompleted} highCarbon={highCarbon} />

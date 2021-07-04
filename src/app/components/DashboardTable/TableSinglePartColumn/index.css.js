@@ -4,6 +4,16 @@ export const Container = styled.div`
   width: 125px;
   height: 100%;
   position: relative;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    width: ${({ width }) => `${width / 5}px`};
+  }
+  @media ${({ theme }) => theme.device.mobileLandscape} {
+    width: ${({ width }) => `${width / 2}px`};
+  }
+  @media ${({ theme }) => theme.device.mobile} {
+    width: ${({ width }) => `${width}px`};
+  }
 `;
 export const Cell = styled.div`
   height: 460px;
