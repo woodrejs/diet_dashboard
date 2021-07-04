@@ -16,15 +16,28 @@ export const Container = styled.div`
   background-image: url(${({ isShake, active }) => setBackground(isShake, active)});
   background-repeat: no-repeat;
   background-position: center bottom;
+
+  :hover {
+    background-color: ${({ theme }) => theme.colors.lightLightest};
+    background-image: url(${({ isShake }) => setBackground(isShake, true)});
+  }
 `;
 export const Text = styled.span`
   max-width: 105px;
+  max-height: 100%;
   font-size: 13px;
   line-height: 18px;
+
+  overflow: hidden;
+  white-space: wrap;
 
   font-family: Arial;
   color: ${({ theme, isChecked }) =>
     isChecked ? theme.colors.black : theme.colors.darkLighter};
+
+  ${Container}:hover & {
+    color: ${({ theme }) => theme.colors.black};
+  }
 `;
 export const Icon = styled.img`
   margin-top: -3px;

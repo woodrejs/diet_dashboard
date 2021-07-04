@@ -20,10 +20,19 @@ export const Text = styled.span`
 
   text-transform: capitalize;
   color: ${({ theme }) => theme.colors.dark};
+
+  ${Container}:hover & {
+    color: ${({ theme }) => theme.colors.primary};
+  }
 `;
 export const Avatar = styled.img`
   width: 34px;
   height: 34px;
+  transition: 0.2s ease-in;
+
+  ${Container}:hover & {
+    transform: scale(1.08);
+  }
 `;
 export const Arrow = styled.img`
   width: 4px;

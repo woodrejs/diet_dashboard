@@ -42,6 +42,7 @@ export const ButtonsBox = styled.div`
 
   @media ${({ theme }) => theme.device.tablet} {
     flex-direction: column;
+    padding-top: 20px;
   }
   @media ${({ theme }) => theme.device.mobileLandscape} {
     flex-direction: row;

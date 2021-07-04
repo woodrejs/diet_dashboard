@@ -57,11 +57,20 @@ export const Footer = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
+  :hover {
+    background-color: ${({ theme }) => theme.colors.darkLighter};
+  }
 `;
 export const FooterBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.2s ease-in;
+
+  :hover {
+    transform: scale(1.05);
+  }
 `;
 export const FooterIcon = styled.img`
   height: 27px;

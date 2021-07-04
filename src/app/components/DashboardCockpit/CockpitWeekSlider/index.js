@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { Container, Button, Slide, SliderBox, Slider } from "./index.css";
 import icon_large_arrow from "./icon_large_arrow.png";
 
-const CockpitWeekSwitch = () => {
+const CockpitWeekSlider = () => {
   const [slideWidth, setSlideWidth] = useState(0);
   const [currSlide, setCurrSlide] = useState(6);
 
@@ -21,7 +21,7 @@ const CockpitWeekSwitch = () => {
 
   return (
     <Container>
-      <Button onClick={handleShowPrev} src={icon_large_arrow} alt="prev_icon" prev />
+      <Button onClick={handleShowPrev} src={icon_large_arrow} alt="prev_icon" />
       <SliderBox ref={sliderBoxRef}>
         <Slider ref={sliderRef} shift={currSlide * slideWidth}>
           <Slide width={slideWidth}>week 1</Slide>
@@ -40,4 +40,4 @@ const CockpitWeekSwitch = () => {
     </Container>
   );
 };
-export default CockpitWeekSwitch;
+export default CockpitWeekSlider;

@@ -19,8 +19,12 @@ export const Container = styled.div`
 `;
 export const Button = styled.img`
   width: 26px;
-  transform: rotateZ(${({ prev }) => (prev ? "180deg" : "unset")});
   cursor: pointer;
+  transition: 0.2s ease-in;
+
+  :hover {
+    transform: scale(0.95);
+  }
 `;
 export const SliderBox = styled.div`
   width: 100%;

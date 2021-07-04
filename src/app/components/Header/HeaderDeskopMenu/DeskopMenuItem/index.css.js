@@ -21,6 +21,10 @@ export const Text = styled.span`
   line-height: 46px;
   text-transform: uppercase;
   color: ${({ active, theme }) => (active ? theme.colors.secondary : theme.colors.dark)};
+
+  ${Container}:hover & {
+    color: ${({ theme }) => theme.colors.primary};
+  }
 `;
 export const Line = styled.div`
   width: 25px;
@@ -29,4 +33,9 @@ export const Line = styled.div`
 
   position: absolute;
   background-color: ${({ theme }) => theme.colors.secondary};
+  transition: 0.2s;
+
+  ${Container}:hover & {
+    transform: scale(0);
+  }
 `;

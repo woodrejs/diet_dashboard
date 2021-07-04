@@ -33,10 +33,18 @@ export const ButtonBox = styled.div`
   position: relative;
   cursor: pointer;
   border-top: 2px solid rgba(0, 0, 0, 0.08);
+
+  :hover {
+    background-color: ${({ theme }) => theme.colors.darkLighter};
+  }
 `;
 export const Button = styled.img`
   height: 14px;
   width: 28px;
+
+  ${ButtonBox}:hover & {
+    transform: scale(1.05);
+  }
 `;
 export const CheckIcon = styled.img`
   right: 32px;

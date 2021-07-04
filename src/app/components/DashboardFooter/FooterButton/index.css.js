@@ -13,6 +13,12 @@ export const Container = styled.a`
   text-decoration: none;
   border: 1px solid ${({ theme }) => theme.colors.neutralLighter};
   background-color: ${({ theme }) => theme.colors.lightLightest};
+  transition: 0.2s ease-in;
+  transform-origin: left;
+
+  :hover {
+    transform: scale(0.95);
+  }
 
   @media ${({ theme }) => theme.device.tablet} {
     margin-right: 0;
