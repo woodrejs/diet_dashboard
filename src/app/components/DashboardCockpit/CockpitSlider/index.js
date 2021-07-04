@@ -32,6 +32,7 @@ const CockpitSlider = () => {
           <SliderItem title="week 4" width={slideWidth} />
           <SliderItem title="week 5" width={slideWidth} />
           <SliderItem title="week 6" width={slideWidth} />
+          <SliderItem title="week 7" width={slideWidth} />
           <SliderItem title="week 8" width={slideWidth} />
           <SliderItem title="week 9" width={slideWidth} />
           <SliderItem title="week 10" width={slideWidth} />

@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "HelveticaNeueLTStd";
+  src: local("HelveticaNeueLTStd"), local("HelveticaNeueLTStd"),
+    url("../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Lt.woff") format("woff"),
+    url("../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Lt.woff2") format("woff2");
+  font-weight: 200;
+  font-style: thin;
+}
+@font-face {
+  font-family: "HelveticaNeueLTStd";
+  src: local("HelveticaNeueLTStd"), local("HelveticaNeueLTStd"),
+    url("../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Roman.woff") format("woff"),
+    url("../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Roman.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueLTStd";
+  src: local("HelveticaNeueLTStd"), local("HelveticaNeueLTStd"),
+    url("../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Md.woff") format("woff"),
+    url("../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Md.woff2") format("woff2");
+  font-weight: 600;
+  font-style: medium;
+}
+@font-face {
+  font-family: "HelveticaNeueLTStd";
+  src: local("HelveticaNeueLTStd"), local("HelveticaNeueLTStd"),
+    url("../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Bd.woff") format("woff"),
+    url("../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Bd.woff2") format("woff2");
+  font-weight: 800;
+  font-style: bold;
+}
